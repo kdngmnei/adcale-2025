@@ -134,6 +134,23 @@
   flex-direction: column;
 }
 
+code {
+  color: #ffffff;
+  font-family: monospace;
+}
+
+pre {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 120px;
+}
+
 .footer a {
   color: white;
 }
