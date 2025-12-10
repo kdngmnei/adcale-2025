@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap");
 :root { 
   --main-bg-color: #bd6418;
+  --main-text-color: #3d443f;
   --font1: "Baloo Bhaina 2", cursive;
   --font2: "Roboto", sans-serif;
 }
@@ -15,6 +16,19 @@
 }
 .font2 {
   font-family: var(--font2);
+}
+
+body {
+  color: var(--main-text-color);
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+/* 明示的にコンテンツ左の h1 を白にする場合（クラス付与を推奨） */
+.content-left h1.white-title {
+  color: #ffffff;
 }
 
 .max-width-1 {

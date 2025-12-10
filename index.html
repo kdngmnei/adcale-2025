@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <title>Blog - Heaven for bloggers</title>
+    <title>テックブログお好きにどうぞ2025</title>
 </head>
 
 <body>
@@ -16,175 +16,132 @@
             <a href="/">
                 <span><img src="img/logo.png" width="94px" alt=""></span>
             </a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <form action="/search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Article Search">
-                <button class="btn">Search</button>
-            </form>
-
         </div>
 
     </nav>
     <div class="max-width-1 m-auto">
         <hr>
     </div>
+
     <div class="m-auto content max-width-1 my-2">
         <div class="content-left">
-            <h1>The heaven for bloggers</h1>
-            <p>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
-                can get a good amount of reach from here!</p>
-            <p>My Halloween decorations are staying in the box this year. To be honest, they didn’t make it out of the
-                box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
-                longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
-                isn’t there more than enough of that going around? Maybe all of us can pretend that Halloween isn’t even
-                happening this year?</p>
+            <h1 class="white-title">クソアプリを作ろう2025</h1>
+            <h2 class="white-text">今年作ったクソアプリを紹介します</h2>
         </div>
         <div class="content-right">
-            <img src="img/home.svg" alt="iBlog">
+            <img src="img/1.png" alt="article">
         </div>
     </div>
 
     <div class="max-width-1 m-auto">
         <hr>
     </div>
-    <div class="home-articles max-width-1 m-auto font2">
-        <h2>Featured Articles</h2>
-        <div class="year-box adjust-year">
-            <div class="year-heading">
-                <h3>Year </h3>
-            </div>
-            <div>
-               <input type="radio" name="year" id="year-2020">
-               <label for="year-2020">2020</label>
-            </div>
-            <div>
-                <input type="radio" name="year" id="year-2021">
-                <label for="year-2021">2021</label>
-            </div>
-            <div>
-                <input type="radio" name="year" id="year-2022">
-                <label for="year-2022">2022</label>
-            </div>
-            <div>
-                <input type="radio" name="year" id="year-2023">
-                <label for="year-2023">2023</label>
-            </div>
-        </div>
-
+    <div class="home-articles max-width-1 m-auto font1">
         <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/3.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>The Future of Work: How AI and Automation are Changing the Job Landscape</h3>
-                </a>
+            <div class="post">
+                <h2>ロト6がどれくらい当たらないことをアプリ作って検証していこう</h2>
+                <br>
+                <p>こんにちは、門永です。</p>
+                <br>
+                <p>今年の頭に毎月クソアプリを作るぞ〜☆ﾐ そんでそれをまとめたアドカレ書くぞ〜☆ﾐ と意気込んでいたのですが、諸事情で頓挫し3ヶ月坊主になったので、作った範囲のクソアプリを深掘りしてみようと思います。
+                </p>
+                <br>
+                <p>さて、今年も年末ジャンボの時期ですが、みなさん購入は済まされましたでしょうか？</p>
+                <br>
+                <p>宝くじって夢がありますよね。その一方で、実際の当選結果を見ると全然当たる気がしないじゃないですか。</p>
+                <p>以前、参加させていただいた年末ジャンボのマストドン共同購入の口数が相当に伸びて、こりゃワンチャンあるで！と思っていたら配当額が160円でした。自販機のコーラも買えませんでした。</p>
+                <br>
+                <p>ということで今回は「どのくらい宝くじが当たらないか」をスマホアプリを作ってシミュレーションしてみようと思います。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>ロト6のあたらなさを考えていく</h3>
+                <br>
+                <p>今回取り上げる商品はロト6です。</p>
+                <p>43個の数字から6つ選ぶだけで2億ゲットという夢のあるくじを、プログラミングの力でどのくらい実現可能なのか立証していきます。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>ロト6の当選確率を計算する</h3>
+                <br>
+                <p>まずはロト6の当選確率を計算してみましょう。</p>
+                <p>抽選対象からいくつ組み合わせパターンがあるか計算するので、数式に起こすと <strong>43C6</strong> となります。</p>
+                <p>これを計算すると43*42*41*40*39*38/6*5*4*3*2*1となり、</p>
+                <p><strong>6,096,454通り</strong> です。</p>
+                <br>
+                <p>もう無理な気がします。</p>
+                <br>
+                <p>ちなみに1口200円なので、全パターン購入した時の投資額は12億円ちょいです。</p>
+                <p>余裕でトリガミです。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>コードへ落とし込む</h3>
+                <p>早速暗雲に飲み込まれましたがこれをプログラミングに落とし込んでみましょう。</p>
+                <p>今回は 1〜610万までの数字をランダムに生成し、その数字が1に近ければ近いほどあたり、という設定にしています。</p>
+                <p>毎回43個の数字からダブりなく6つ抽選して、さらに結果と照合していくと処理が重くなってしまうので、各パターンに通し番号を振ったというテイで進めます。</p>
 
-                <div>Byomkesh Mahato</div>
-                <span>07 January | 6 min read</span>
+                <pre>
+                    （例）
+パターン{1}: [1,2,3,4,5,6]
+パターン{6}: [1,2,3,4,5,12]
+パターン{692万}: [38,39,40,41,42,43]
+                </pre>
+
+                <p>この番号をランダムに抽選し、大当たりの「パターン{1}」が出たら勝ちのゲームです。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>ランダム生成と判定処理</h3>
+                <p>まずはランダムな数字を生成し、それが当たりの番号に一致するか判定します。</p>
+                <p>これをあたりの通し番号にヒットするか判定します。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>SwiftUI での画面構成</h3>
+                <p>今回は SwiftUI なので、ボタンや結果表示テキストもコードで書きます。</p>
+                <p>先ほどの抽選実行ボタンと、結果を反映する文字列パーツを配置します。</p>
+
+                <p>一応これだけでも動きます。すごいよね。</p>
+                <p>では実際に動かしてみましょう。</p>
+
+                <p><strong>当たるわけねえな。</strong></p>
+
+                <p>まあ実際はこれを何人も同時に行うので、あたりが3本発生することなんかもあります。</p>
+                <p>とはいえ1枚ずつ買ってたのでは無間地獄ですね。</p>
+                <br>
+                <p>自動化、していきましょう</p>
+                <br>
+                <hr>
+                <br>
+                <h3>自動化して高速抽選</h3>
+                <p>ここで自動化する関数を書きます。</p>
+                <p>結果を確認して、1等が当たらなければもうっかい抽選するものです。</p>
+
+                <p>こういった処理を繰り返すと問題になりがちなのがメモリリークです。</p>
+                <p>特定の処理を行った際に、もう使わないデータがメモリに残り続けることで動作に悪影響を及ぼすことがあります。</p>
+                <p>このアプリでは不要なデータを残さないよう、ひたすら1つの変数を書き換えていきます。</p>
+
+
+                <p>完成しました。走らせてみましょう。</p>
+
+                <p><strong>〜10分後〜<br>おわんね〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</strong></p>
+
+                <p>とりあえず当たるまで回しておきますかね…….</p>
+
+                <h3>ついに…当たった！！！！！！</h3>
+                <p>投資 10 億！<br>
+                    バック 3 億！<br>
+                    <strong>7 億負け！</strong><br>
+                    あざした！
+                </p>
+
             </div>
         </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/1.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>The Psychology of Procrastination: Understanding Why We Delay and How to Overcome It</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>12 February | 5 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/2.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>10 Ways to Improve Your Mental Health and Well-Being</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>17 March | 4 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/1.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>Why Mindfulness Matters: The Benefits of Practicing Mindfulness in Your Daily Life</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>21 April | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/11.svg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>The Power of Positive Thinking: How Optimism Can Improve Your Life</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>18 May | 5 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/3.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>Navigating the Job Market: Tips for Finding Your Dream Job</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>21 June | 3 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/2.png" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>The Benefits of Learning a Second Language: Why Bilingualism is Good for Your Brain and Your Career</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>16 July | 4 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="img/11.svg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="/blogpost.html">
-                    <h3>The Ethics of AI: Exploring the Social and Moral Implications of Artificial Intelligence</h3>
-                </a>
-
-                <div>Byomkesh Mahato</div>
-                <span>08 August | 6 min read</span>
-            </div>
-        </div>
-
     </div>
 
     <div class="footer">
+        <p>テンプレはここからお借りしましたのでフッタはそのまま残しときます</p>
         <p>Copyright &copy; iBlog.com </p>
         <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
     </div>
