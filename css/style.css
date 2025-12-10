@@ -151,6 +151,26 @@ pre {
   min-height: 120px;
 }
 
+.responsive-img {
+  display: block;
+  width: 100%;        /* 親コンテナに合わせる */
+  max-width: 640px;   /* 最大表示幅（好みで調整） */
+  height: auto;       /* アスペクト比を維持 */
+  object-fit: cover;  /* coverで切り取り的に収める場合 */
+  border-radius: 6px;
+  margin: 16px auto;  /* 中央寄せ（ブロック表示） */
+}
+
+/* 横幅いっぱいのカバー画像用（高さを固定して切り取る） */
+.img-cover {
+  display: block;
+  width: 100%;
+  height: 240px;      /* 固定高さ（調整可） */
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
 .footer a {
   color: white;
 }
