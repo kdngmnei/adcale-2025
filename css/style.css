@@ -148,12 +148,12 @@ pre {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  min-height: 120px;
+  min-height: 10px;
 }
 
 .responsive-img {
   display: block;
-  width: 100%;        /* 親コンテナに合わせる */
+  width: 80%;        /* 親コンテナに合わせる */
   max-width: 640px;   /* 最大表示幅（好みで調整） */
   height: auto;       /* アスペクト比を維持 */
   object-fit: cover;  /* coverで切り取り的に収める場合 */
@@ -169,6 +169,15 @@ pre {
   object-fit: cover;
   border-radius: 6px;
   margin: 16px 0;
+}
+
+.responsive-video {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 6px;
+  margin: 16px auto;
 }
 
 .footer a {
