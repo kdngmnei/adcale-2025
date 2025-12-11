@@ -13,7 +13,7 @@
 <body>
     <nav class="navigation max-width-1 m-auto">
         <div class="nav-left">
-                <span><img src="img/kdng-olk.png" width="94px" alt=""></span>
+            <span><img src="img/kdng-olk.png" width="94px" alt=""></span>
         </div>
 
     </nav>
@@ -41,7 +41,15 @@
                 <br>
                 <p>こんにちは、門永です。</p>
                 <br>
-                <p>今年の頭に毎月クソアプリを作るぞ〜☆ﾐ そんでそれをまとめたアドカレ書くぞ〜☆ﾐ と意気込んでいたのですが、諸事情で頓挫し3ヶ月坊主になったので、作った範囲のクソアプリを深掘りしてみようと思います。
+                <p>みなさんは<strong>クソアプリ</strong>をご存知でしょうか？</p>
+                <p>クソアプリとは、クソなアプリケーションのことを指します。</p>
+                <p>今回はそんなクソアプリを作っていきます。</p>
+                <br>
+                <p>ちなみに、テックブログ大手のQiitaなどでもクソアプリ専門アドベントカレンダーが立ち上がっていたりします。ぜひ皆さんもお気に入りのクソアプリ記事を探してみてください。</p>
+                <a href="https://qiita.com/advent-calendar/2025/kuso-app">クソアプリ Advent Calendar 2025</a>
+                <br>
+                <br>
+                <p>私は今年の頭に毎月クソアプリを作るぞ〜☆ﾐ そんでそれをまとめたアドカレ書くぞ〜☆ﾐ と意気込んでいたのですが、諸事情で頓挫し3ヶ月坊主になったので、作った範囲のクソアプリを深掘りしてみようと思います。
                 </p>
                 <br>
                 <p>さて、今年も年末ジャンボの時期ですが、みなさん購入は済まされましたでしょうか？</p>
@@ -49,7 +57,7 @@
                 <p>宝くじって夢がありますよね。その一方で、実際の当選結果を見ると全然当たる気がしないじゃないですか。</p>
                 <p>以前、参加させていただいた年末ジャンボのマストドン共同購入の口数が相当に伸びて、こりゃワンチャンあるで！と思っていたら配当額が160円でした。自販機のコーラも買えませんでした。</p>
                 <br>
-                <p>ということで今回は「どのくらい宝くじが当たらないか」をスマホアプリを作ってシミュレーションしてみようと思います。</p>
+                <p>ということで今回は<strong>「どのくらい宝くじが当たらないか」</strong>をスマホアプリを作ってシミュレーションしてみようと思います。</p>
                 <br>
                 <hr>
                 <br>
@@ -79,10 +87,10 @@
                 <p>今回は 1〜610万までの数字をランダムに生成し、その数字が1に近ければ近いほどあたり、という設定にしています。</p>
                 <p>毎回43個の数字からダブりなく6つ抽選して、さらに結果と照合していくと処理が重くなってしまうので、各パターンに通し番号を振ったというテイで進めます。</p>
 
-<pre>
+                <pre>
 パターン{1}: [1,2,3,4,5,6]
 パターン{6}: [1,2,3,4,5,12]
-パターン{692万}: [38,39,40,41,42,43]
+パターン{610万}: [38,39,40,41,42,43]
 </pre>
 
                 <p>この番号をランダムに抽選し、大当たりの「パターン{1}」が出たら勝ちのゲームです。</p>
@@ -91,7 +99,7 @@
                 <br>
                 <h3>ランダム生成と判定処理</h3>
                 <p>まずはランダムな数字を生成し、それが当たりの番号に一致するか判定します。</p>
-                                <p>これをあたりの通し番号にヒットするか判定します。</p>
+                <p>これをあたりの通し番号にヒットするか判定します。</p>
                 <pre>
 //ランダムな数字を生成する
 func makeRandom() -> Int {
@@ -116,7 +124,7 @@ func lottery(){
                 <h3>SwiftUI での画面構成</h3>
                 <p>今回は SwiftUI なので、ボタンや結果表示テキストもコードで書きます。</p>
                 <p>先ほどの抽選実行ボタンと、結果を反映する文字列パーツを配置します。</p>
-<pre>
+                <pre>
 Text("\(result)")
     .font(.title)
 Button(action: {
@@ -125,29 +133,33 @@ Button(action: {
     Text("抽せんする")
 }
 </pre>
-                <p>一応これだけでも</p>
+<br><br>
+                <p>一応これを少し整えるだけでも</p>
                 <img src="img/hand1.png" alt="1回目" class="responsive-img">
+                <br>
                 <p>こんなのができます。すごいよね。</p>
                 <p>では実際に動かしてみましょう。</p>
-<img src="img/hand2.png" alt="2回目" class="responsive-img">
-<img src="img/hand3.png" alt="3回目" class="responsive-img">
-<img src="img/hand4.png" alt="4回目" class="responsive-img">
-<img src="img/hand5.png" alt="5回目" class="responsive-img">
-<img src="img/hand6.png" alt="6回目" class="responsive-img">
-<img src="img/hand7.png" alt="7回目" class="responsive-img">
-                <p><strong>当たるわけねえな。</strong></p>
+<br><br>
+                <img src="img/hand2.png" alt="2回目" class="responsive-img">
+                <img src="img/hand3.png" alt="3回目" class="responsive-img">
+                <img src="img/hand4.png" alt="4回目" class="responsive-img">
+                <img src="img/hand5.png" alt="5回目" class="responsive-img">
+                <img src="img/hand6.png" alt="6回目" class="responsive-img">
+                <img src="img/hand7.png" alt="7回目" class="responsive-img">
+                <br><br>
+                <p><strong>当たるわけねえな。</strong></p><br><br>
 
                 <p>まあ実際はこれを何人も同時に行うので、あたりが3本発生することなんかもあります。</p>
                 <p>とはいえ1枚ずつ買ってたのでは無間地獄ですね。</p>
                 <br>
-                <p>自動化、していきましょう</p>
+                <p><strong>自動化、していきましょう</strong></p>
                 <br>
                 <hr>
                 <br>
                 <h3>自動化して高速抽せん</h3>
                 <p>ここで自動化する関数を書きます。</p>
-                <p>結果を確認して、1等が当たらなければもうっかい抽せんするものです。</p>
-<pre>  
+                <p>結果を確認して、1等が当たらなければもう一回抽せんするものです。</p>
+                <pre>
 func autoLott(){
     // 当たりのパターン番号
     let win = 1
@@ -186,11 +198,12 @@ Button("自動抽選開始"){
         }
     }
     .disabled(isRunning)
-</pre>
+</pre><br><br>
                 <p>こういった処理を繰り返すと問題になりがちなのがメモリリークです。</p>
                 <p>特定の処理を行った際に、もう使わないデータがメモリに残り続けることで動作に悪影響を及ぼすことがあります。</p>
                 <p>このアプリでは不要なデータを残さないよう、ひたすら1つの変数を書き換えていきます。</p>
-<pre>
+                <p>これで正しいかはよくわかりません。普通は明示的にメモリ解放処理をするんですが、まあクソアプリなんでね。</p><br><br>
+                <pre>
 // 配当額を表示する文字列
 Text("配当額:\(getCashCalc(c1: got1times, c2: got2times, c3: got3times, c4: got4times, c5: got5times))円")
     .frame(width: scrnW * 0.5,alignment: .trailing)
@@ -200,32 +213,50 @@ Text("\(got5c)回目(\(got5c * 200)円の投資)で5等が当せん(\(got5times)
         .font(.caption)
         .opacity(!isgot5 ? 0 : 1)
 </pre>
-<img src="img/auto1.png" alt="自動の待機画面" class="responsive-img">
-                <p>完成しました。走らせてみましょう。</p>
-<video class="responsive-video" autoplay muted loop>
-    <source src="img/capture.mov" type="video/mp4">
-</video>
+                <img src="img/auto1.png" alt="自動の待機画面" class="responsive-img">
+                <br><p>完成しました。走らせてみましょう。</p><br><br>
+                <p>↓パソコンでご覧の方は動画になっているかもしれません↓</p>
+                <video class="responsive-video" autoplay muted loop>
+                    <source src="img/capture.mov" type="video/mp4">
+                </video>
 
-
-                <p><strong>〜10分後〜<br>おわんね〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</strong></p>
+<br><br>
+                <p><strong>〜10分後〜</strong></p>
+                                <video class="responsive-video" autoplay muted loop>
+                    <source src="img/capture2.mov" type="video/mp4">
+                </video>
+                <br><br>
+                <p><strong>おわんね〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</strong></p>
 
                 <p>とりあえず当たるまで回しておきますかね…….</p>
-
-                <h3>当たった！！！！！！</h3>
-                <p>投資 10 億！<br>
-                    バック 3 億！<br>
-                    <strong>7 億負け！</strong><br>
-                    あざした！
-                </p>
-
+<br>
+<br>
+                <p>…………………………………………</p>
+<br>
+<br>
+                <p>まあ2時だし寝るか…</p><br><br>
+<p>朝になりました。<br><br>寝坊しかけたのでそのまま会社へ出発して、あと帰ってきてからしばらく確認するのを忘れてたので相当な時間放置しました。多分終わってると思います。</p>
+<br>
+<br>
+<img src="img/result.png" alt="結果" class="responsive-img">
+<strong><p>あ！！！！！！！！！！<br>終わってんじゃん！！！！！！！！！！！！！！！！！！！！</p></strong>
+<br>
+<br>
+<p>ということで今回のシミュレーション最終結果は投資13億弱のバック6億弱でした。</p>
+<p>7億くらい負けました。</p>
+<br>
+<p><strong>でも年末ジャンボは1等10億円‼️‼️‼️‼️‼️</strong></p>
+<br>
+<img src="img/jumbo.png" alt="公式" class="responsive-img">
+<br>
+<p>よくわかりませんが皆さんもギャンブルに大金突っ込んでみたり、クソアプリを作ってみる素敵な年末年始はいかがでしょうか。</p>
+<p>さようなら。</p>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>テンプレはここからお借りしましたのでフッタはそのまま残しときます</p>
-        <p>Copyright &copy; iBlog.com </p>
-        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+        <p>テンプレはここから借りたよ→iBlog.com </p>
     </div>
 </body>
 
